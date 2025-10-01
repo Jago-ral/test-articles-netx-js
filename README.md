@@ -23,7 +23,7 @@ npm install
 ### Développement
 ```bash
 npm run dev
-# Accessible sur http://localhost:3000 (si le port 300 est libre)
+# Accessible sur http://localhost:3000 (si le port 3000 est libre)
 ```
 
 ### Production
