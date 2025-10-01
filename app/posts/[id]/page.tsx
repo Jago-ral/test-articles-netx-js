@@ -33,7 +33,7 @@ async function getPost(id: string): Promise<Post> {
 }
 
 export async function generateStaticParams() {
-  return Array.from({ length: 10 }, (_, i) => ({
+  return Array.from({ length: 9 }, (_, i) => ({
     id: String(i + 1),
   }));
 }

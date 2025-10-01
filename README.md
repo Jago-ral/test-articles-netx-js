@@ -1,4 +1,37 @@
-# Application Articles Next.js
+# Application Lecture d'articles en Next.js
+
+
+## Stack Technique
+
+- **Framework** : Next.js 15 (stable) avec App Router
+- **Runtime** : React 19
+- **Langage** : TypeScript
+- **Styling** : Tailwind CSS
+- **API** : JSONPlaceholder
+
+## Installation et Lancement
+
+### Prérequis
+- Node.js 18+
+- npm
+
+### Installation
+```bash
+npm install
+```
+
+### Développement
+```bash
+npm run dev
+# Accessible sur http://localhost:3000 (si le port 300 est libre)
+```
+
+### Production
+```bash
+npm run build
+npm start
+```
+
 
 ## Gestion du Rendu et Cache
 
@@ -9,7 +42,7 @@
 
 Le choix de l'ISR s'explique par :
 - Les articles changent peu fréquemment sur l'API externe
-- Besoin d'équilibrer fraîcheur des données et performance
+- Besoin d'améliorer la performance de l'app
 - Possibilité de revalidation automatique toutes les heures (3600s)
 
 ```typescript
@@ -20,14 +53,13 @@ fetch("https://jsonplaceholder.typicode.com/posts", {
 
 **Avantages** :
 - Temps de réponse instantané (contenu en cache)
-- Mise à jour automatique en arrière-plan
+- Mise à jour automatique 
 - Réduction de charge sur l'API externe
 
 #### 2. SSG (Static Site Generation)
-**Utilisé pour** : Pages détail des 10 premiers articles (`/posts/[id]`)
+**Utilisé pour** : Pages détail des 9 premiers articles (`/posts/[id]`)
 
-Les 10 premiers articles sont pré-générés au build via `generateStaticParams()`. Ce choix est justifié par :
-- Ce sont statistiquement les articles les plus consultés
+Les 9 premiers articles sont pré-générés au build via `generateStaticParams()`. Ce choix est justifié pour :
 - Performances optimales (pages statiques servies depuis CDN)
 - SEO maximal pour le contenu populaire
 
@@ -76,35 +108,3 @@ Avec plus de temps, j'aurais implémenté :
 
 6. **Service Worker** : Mise en cache côté client avec stratégie stale-while-revalidate pour expérience offline et performances mobiles
 
----
-
-## Stack Technique
-
-- **Framework** : Next.js 15 (stable) avec App Router
-- **Runtime** : React 19
-- **Langage** : TypeScript
-- **Styling** : Tailwind CSS
-- **API** : JSONPlaceholder
-
-## Installation et Lancement
-
-### Prérequis
-- Node.js 18+
-- npm
-
-### Installation
-```bash
-npm install
-```
-
-### Développement
-```bash
-npm run dev
-# Accessible sur http://localhost:3000
-```
-
-### Production
-```bash
-npm run build
-npm start
-```
