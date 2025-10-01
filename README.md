@@ -64,7 +64,7 @@ Les 9 premiers articles sont pré-générés au build via `generateStaticParams(
 - SEO maximal pour le contenu populaire
 
 #### 3. SSR (Server-Side Rendering)
-**Utilisé pour** : Articles au-delà de l'ID 10
+**Utilisé pour** : Articles au-delà de l'ID 9
 
 Les articles non pré-générés sont rendus à la demande côté serveur, avec cache ISR (revalidation 3600s).
 
@@ -100,11 +100,8 @@ Avec plus de temps, j'aurais implémenté :
 
 2. **Debouncing sur recherche** : Éviter re-renders excessifs lors de la frappe dans le champ de recherche
 
-3. **Pagination serveur** : Actuellement, les 100 articles sont chargés d'un coup. Une pagination réduirait charge initiale et consommation mémoire
+3. **Ajout d'un loader pour le infinite scroll** : Actuellement, il n'y a pas d'animation lors du chargement des articles suivants.
 
 4. **Metadata dynamique** : Générer `generateMetadata()` pour chaque article avec titre et description pour améliorer SEO et partage social
 
-5. **Revalidation différenciée** : Distinction entre revalidation globale (liste) et revalidation d'un article spécifique pour granularité accrue
-
-6. **Service Worker** : Mise en cache côté client avec stratégie stale-while-revalidate pour expérience offline et performances mobiles
-
+5. **Amélioration du design** : Revoir les cards et ajout d'animations on hover (Pourquoi pas un  flip X?)

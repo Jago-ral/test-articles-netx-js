@@ -13,12 +13,9 @@ export default function Home() {
           </div>
 
           <h1 className="text-5xl font-bold text-slate-900 mb-6">
-            Test Technique Frontend
+            Bonne lecture !
           </h1>
 
-          <p className="text-xl text-slate-600 mb-12">
-            Application de gestion d'articles construite avec Next.js 13 et App Router
-          </p>
 
           <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
             <h2 className="text-2xl font-semibold text-slate-900 mb-4">
@@ -27,7 +24,11 @@ export default function Home() {
             <ul className="text-left space-y-3 text-slate-700">
               <li className="flex items-start gap-2">
                 <span className="text-blue-600 font-bold">✓</span>
-                <span>Liste des articles avec recherche en temps réel</span>
+                <span>Liste des articles avec infinite scroll</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-blue-600 font-bold">✓</span>
+                <span>Recherche en temps réel sur les titre d'articles</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-blue-600 font-bold">✓</span>
